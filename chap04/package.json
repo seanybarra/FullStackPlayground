@@ -1,0 +1,15 @@
+{
+  "name": "chap04",
+  "version": "1.0.0",
+  "description": "Chapter 4 code content from web development with node and express",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Ybarra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  }
+}
