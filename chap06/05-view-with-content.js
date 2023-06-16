@@ -20,7 +20,7 @@ app.use(session({ resave: false, saveUninitialized: false, secret: 'keyboard cat
 
 // See the views/greeting.handlebars file for the contents of this view
 app.get('/greeting', (req,res) => {
-    res.render('/greeting', {
+    res.render('greeting', {
         message: 'Hello esteemed programmer',
         style: req.query.style,
         userid: req.cookies.userid,
@@ -34,7 +34,7 @@ app.get('/set-random-userid', (req,res) => {
 })
 
 app.get('/set-random-username', (req,res) => {
-    res.session.username = catNames.random()
+    req.session.username = catNames.random()
     res.redirect('/greeting')
 })
 
