@@ -1,0 +1,2 @@
+# Git Will ignore these files when staging, commiting, and pushing
+node_modules
