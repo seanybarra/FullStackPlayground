@@ -1,6 +1,7 @@
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
 
+const handlers = require('./lib/handlers')
 const weatherMiddleware = require('./lib/middleware/weather')
 const app = express()
 
@@ -20,7 +21,10 @@ app.set('view engine', 'handlebars')
 const port = process.env.PORT || 3000
 
 app.use(weatherMiddleware)
-app.get('/', (req,res) => res.render('home'))
-app.get('/section-test', (req,res) => res.render('section-test'))
+app.get('/', (req,res) => handlers.home)
+app.get('/section-test', (req,res) => handlers.sectionTest)
+
+app.use(handlers.notFound)
+app.use(handlers.serverError)
 
 app.listen(port, () => console.log(`Express started on http://localhost:${port}` + '; press Ctrl-C to terminate'))
