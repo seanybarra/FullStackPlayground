@@ -18,3 +18,8 @@ app.engine('handlebars', expressHandlebars.engine({
 }))
 app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+const port = process.env.PORT || 3000
+
+app.use(express.static(__dirname+'/public'))
