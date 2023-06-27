@@ -1,0 +1,16 @@
+{
+  "name": "chap08",
+  "version": "1.0.0",
+  "description": "Chap08 of Web development with node and express: Form handling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Ybarra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7"
+  }
+}

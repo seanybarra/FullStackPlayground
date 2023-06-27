@@ -1,0 +1,2 @@
+# These files will be ignored when committing and pushing to git
+node_modules
